@@ -15,9 +15,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.wuhao.test.presentation.commentlist.CommentListScreen
 import com.wuhao.test.presentation.Screen
 import com.wuhao.test.presentation.SearchView
+import com.wuhao.test.presentation.commentlist.CommentListScreen
 import com.wuhao.test.presentation.postlist.PostListScreen
 import com.wuhao.test.ui.theme.TestTheme
 import dagger.hilt.android.AndroidEntryPoint

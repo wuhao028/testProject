@@ -4,9 +4,9 @@ import android.content.Context
 import com.google.gson.Gson
 import com.wuhao.test.common.Constants
 import com.wuhao.test.data.repository.LocalData
-import com.wuhao.test.domain.PostRepository
 import com.wuhao.test.data.repository.PostRepositoryImpl
 import com.wuhao.test.data.repository.RetrofitService
+import com.wuhao.test.domain.PostRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

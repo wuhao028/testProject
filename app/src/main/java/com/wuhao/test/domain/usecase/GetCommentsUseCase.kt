@@ -2,7 +2,6 @@ package com.wuhao.test.domain.usecase
 
 import com.wuhao.test.common.Resource
 import com.wuhao.test.data.model.CommentItem
-import com.wuhao.test.data.repository.LocalData
 import com.wuhao.test.domain.PostRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
