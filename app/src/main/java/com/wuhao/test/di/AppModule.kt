@@ -1,9 +1,10 @@
 package com.wuhao.test.di
 
 import android.content.Context
+import com.google.gson.Gson
 import com.wuhao.test.common.Constants
 import com.wuhao.test.data.repository.LocalData
-import com.wuhao.test.data.repository.PostRepository
+import com.wuhao.test.domain.PostRepository
 import com.wuhao.test.data.repository.PostRepositoryImpl
 import com.wuhao.test.data.repository.RetrofitService
 import dagger.Module
@@ -22,8 +23,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideLocalRepository(@ApplicationContext context: Context): LocalData {
-        return LocalData(context)
+    fun provideLocalRepository(@ApplicationContext context: Context, gson: Gson): LocalData {
+        return LocalData(context, gson)
     }
 
     @Provides
@@ -40,5 +41,11 @@ object AppModule {
     @Singleton
     fun providePostRepository(api: RetrofitService): PostRepository {
         return PostRepositoryImpl(api)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGson(): Gson {
+        return Gson()
     }
 }

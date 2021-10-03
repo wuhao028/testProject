@@ -2,6 +2,7 @@ package com.wuhao.test.data.repository
 
 import com.wuhao.test.data.model.CommentItem
 import com.wuhao.test.data.model.PostItem
+import com.wuhao.test.domain.PostRepository
 import javax.inject.Inject
 
 class PostRepositoryImpl @Inject constructor(

@@ -36,7 +36,10 @@ fun PostListScreen(
             val filteredPosts = if (searchedText.isEmpty()) {
                 state.posts
             } else {
-                state.posts.filter { it.body.contains(searchedText) }
+                state.posts.filter {
+                    it.body.contains(searchedText, true)
+                            || it.title.contains(searchedText, true)
+                }
             }
             items(filteredPosts) { post ->
                 PostItemScreen(

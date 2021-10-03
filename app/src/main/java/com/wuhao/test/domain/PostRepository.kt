@@ -1,4 +1,4 @@
-package com.wuhao.test.data.repository
+package com.wuhao.test.domain
 
 import com.wuhao.test.data.model.CommentItem
 import com.wuhao.test.data.model.PostItem
