@@ -1,9 +1,6 @@
 package com.wuhao.test.presentation.commentlist
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.CircularProgressIndicator
@@ -27,7 +24,10 @@ fun CommentListScreen(
     val state = viewModel.state.value
     Box(modifier = Modifier.fillMaxSize()) {
         state.comments?.let {
-            LazyColumn(modifier = Modifier.fillMaxSize()) {
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                contentPadding = PaddingValues(20.dp)
+            ) {
                 items(state.comments) { comment ->
                     CommentItemView(
                         commentItem = comment

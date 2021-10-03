@@ -8,6 +8,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.BlendMode.Companion.Color
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -24,18 +25,17 @@ fun PostItemScreen(
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onItemClick(postItem) },
+        verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "(${postItem.title})",
-            style = MaterialTheme.typography.body1,
-            fontSize = 15.sp,
-            fontWeight = FontWeight.Bold,
-            overflow = TextOverflow.Ellipsis
+            text = postItem.title,
+            style = MaterialTheme.typography.h6
         )
+        Spacer(modifier = Modifier.height(4.dp))
         Text(
-            text = "(${postItem.body})",
-            style = MaterialTheme.typography.body1,
-            overflow = TextOverflow.Ellipsis
+            text = postItem.body,
+            style = MaterialTheme.typography.body2,
+            fontStyle = FontStyle.Italic
         )
         Divider(color = androidx.compose.ui.graphics.Color.Gray, thickness = 1.dp)
     }
