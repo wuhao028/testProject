@@ -3,6 +3,7 @@ package com.wuhao.test.di
 import android.content.Context
 import com.wuhao.test.common.Constants
 import com.wuhao.test.data.repository.LocalData
+import com.wuhao.test.data.repository.PostRepository
 import com.wuhao.test.data.repository.PostRepositoryImpl
 import com.wuhao.test.data.repository.RetrofitService
 import dagger.Module
@@ -37,7 +38,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providePostsRepository(api: RetrofitService): PostRepositoryImpl {
+    fun providePostRepository(api: RetrofitService): PostRepository {
         return PostRepositoryImpl(api)
     }
 }

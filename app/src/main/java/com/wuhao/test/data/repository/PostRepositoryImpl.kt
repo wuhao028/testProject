@@ -6,7 +6,7 @@ import javax.inject.Inject
 
 class PostRepositoryImpl @Inject constructor(
     private val api: RetrofitService
-) : RetrofitService {
+) : PostRepository {
 
     override suspend fun getPosts(): List<PostItem> {
         return api.getPosts()
